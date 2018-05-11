@@ -23,12 +23,10 @@ describe('Networks', function() {
     networks.testnet.regtestEnabled.should.equal(true);
 
     networks.disableRegtest();
-    networks.testnet.networkMagic.should.deep.equal(new Buffer('cee2caff', 'hex'));
-    networks.testnet.port.should.equal(19999);
+    networks.testnet.networkMagic.should.deep.equal(new Buffer('d12bb37a', 'hex'));
+    networks.testnet.port.should.equal(13455);
     networks.testnet.dnsSeeds.should.deep.equal([
-     'testnet-seed.darkcoin.io',
-     'testnet-seed.dashdot.io',
-     'test.dnsseed.masternode.io'
+     'send-testnet.seed2.fuzzbawls.pw'
     ]);
   });
 

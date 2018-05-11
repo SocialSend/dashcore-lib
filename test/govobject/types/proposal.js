@@ -27,7 +27,7 @@ describe('Proposal', function() {
     payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
     payment_amount: 10,
     type: 1,
-    url: "http://www.dash.org"
+    url: "http://www.socialsend.org"
   };
   it('should create new proposal', function() {
     var proposal = new Proposal();
@@ -39,7 +39,7 @@ describe('Proposal', function() {
     proposal.payment_amount = 10;
     proposal.start_epoch = startDate;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.socialsend.org";
 
     proposal.serialize().should.equal(expectedHex);
   });
@@ -54,7 +54,7 @@ describe('Proposal', function() {
     proposal.payment_amount = 10;
     proposal.start_epoch = 'not a date'; // invalid date
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.socialsend.org";
 
     expect(function() {
       return proposal.serialize();
@@ -71,7 +71,7 @@ describe('Proposal', function() {
     proposal.payment_amount = 10;
     proposal.start_epoch = 1477872000;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.socialsend.org";
     var expectedErr = new errors.GovObject.Proposal.invalidDate();
     expect(proposal.getSerializationError().message).to.be.equal(expectedErr.message);
 
@@ -87,7 +87,7 @@ describe('Proposal', function() {
     proposal.payment_amount = 10;
     proposal.start_epoch = 1477872000;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.socialsend.org";
 
     expect(function() {
       return proposal.serialize();
@@ -108,7 +108,7 @@ describe('Proposal', function() {
     proposal.payment_amount = 10;
     proposal.start_epoch = start_epoch;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.socialsend.org";
 
     expect(function() {
       return proposal.serialize();
@@ -126,7 +126,7 @@ describe('Proposal', function() {
     proposal.payment_amount = 10;
     proposal.start_epoch = startDate;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.socialsend.org";
 
     expect(function() {
       return proposal.serialize();
@@ -144,17 +144,17 @@ describe('Proposal', function() {
     proposal.payment_amount = 10;
     proposal.start_epoch = startDate;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.socialsend.org";
 
     var proposal2 = new Proposal();
     proposal2.network = 'livenet';
     proposal2.end_epoch = endDate;
-    proposal2.name = 'Proposal-36-DashATM';
+    proposal2.name = 'Proposal-36ATM';
     proposal2.payment_address = '7Z7X2jaqMtzsr2oHpSn89cNaEC16DYByz3';
     proposal2.payment_amount = 1625.487;
     proposal2.start_epoch = startDate;
     proposal2.type = 1;
-    proposal2.url = "https://www.dashcentral.org/p/Proposal-36-DashATM";
+    proposal2.url = "https://www.dashcentral.org/p/Proposal-36ATM";
 
     expect(function() {
       return proposal.serialize();
@@ -175,7 +175,7 @@ describe('Proposal', function() {
     proposal.payment_amount = '';
     proposal.start_epoch = startDate;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.socialsend.org";
 
     expect(function() {
       return proposal.serialize();
@@ -211,7 +211,7 @@ describe('Proposal', function() {
     proposal.payment_amount = 10;
     proposal.start_epoch = startDate;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.socialsend.org";
 
     expect(function() {
       return proposal.serialize();
@@ -226,7 +226,7 @@ describe('Proposal', function() {
       payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
       payment_amount: 10,
       type: 1,
-      url: "http://www.dash.org"
+      url: "http://www.socialsend.org"
     };
     var proposal = new Proposal();
     proposal = proposal.fromObject(jsonProposal);
@@ -243,7 +243,7 @@ describe('Proposal', function() {
       payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
       payment_amount: 10,
       type: 1,
-      url: "http://www.dash.org"
+      url: "http://www.socialsend.org"
     };
 
     var proposal = new Proposal();
@@ -280,7 +280,7 @@ describe('Proposal', function() {
       payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
       payment_amount: 10,
       type: 1,
-      url: "http://www.dash.org"
+      url: "http://www.socialsend.org"
     };
     var stringifiedJSON = JSON.stringify(jsonProposal);
     var proposal = new Proposal();

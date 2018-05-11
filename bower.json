@@ -1,17 +1,17 @@
 {
-  "name": "bitcore-lib-dash",
-  "main": "./bitcore-lib-dash.min.js",
+  "name": "socialsendcore-lib",
+  "main": "./socialsendcore-lib.min.js",
   "version": "0.15.3",
-  "homepage": "https://github.com/dashevo/bitcore-lib-dash",
+  "homepage": "https://github.com/SocialSend/socialsendcore-lib",
   "authors": [
-    "Dash", "BitPay, Inc."
+    "SocialSend", "BitPay, Inc."
   ],
-  "description": "A pure, powerful core for your dash project.",
+  "description": "A pure, powerful core for your socialsend project.",
   "moduleType": [
     "globals"
   ],
   "keywords": [
-    "dash",
+    "socialsend",
     "bitcoin",
     "bitcore",
     "btc",
